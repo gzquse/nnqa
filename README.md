@@ -134,6 +134,17 @@ python -m nnqa.eval \
     --shots 8192
 ```
 
+### Comparison benchmarks (sine + VQA + polynomial domain sweep)
+
+`research/scripts/nnqa_comparison_benchmarks.py` runs, in order: (1) deep `DeepPolynomialNN` on a fixed sine target with classical vs mapped-quantum RMSE vs the analytic sine; (2) the same sine target with a two-qubit variational ansatz (statevector MSE training, finite-shot evaluation) vs mapped NNQA at equal shots per test ``x``; (3) ``PolynomialNN`` plus ``quantum_polynomial_direct`` vs ground truth for degrees 1..N on test grids ``[-0.5,0.5]`` and ``[-0.9,0.9]``. Full definitions and hyperparameters are in the module docstring.
+
+```bash
+python research/scripts/nnqa_comparison_benchmarks.py --output-dir results/nnqa_comparison_benchmarks
+python research/scripts/nnqa_comparison_benchmarks.py --quick
+```
+
+Writes ``comparison_benchmark_report.json`` under ``--output-dir``.
+
 ## Quantum Arithmetic Primitives
 
 Quantum Arithmetic Primitives:
