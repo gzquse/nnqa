@@ -1,0 +1,40 @@
+
+*$py.class
+cloud_job/out/
+*.credentials
+# Credentials - NEVER COMMIT THESE
+demo_results/
+.DS_Store
+.env
+.env.*
+ENV/
+**/env.local
+!.env.template
+*.h5
+# IDE
+.idea/
+.ipynb_checkpoints/
+# Jupyter
+*.log
+logs/
+# Logs
+# OS
+out/
+# Output files
+*.pdf
+*.png
+__pycache__/
+*.py[cod]
+# Python
+*.qpy
+results/
+*.secret
+*.so
+*.svg
+*.swo
+*.swp
+Thumbs.db
+.venv/
+venv/
+# Virtual environments
+.vscode/
